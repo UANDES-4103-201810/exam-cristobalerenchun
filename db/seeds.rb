@@ -17,15 +17,15 @@ ingredient8 = Ingredient.create :ingredient_name => "mushrooms"
 ingredient9 = Ingredient.create :ingredient_name => "ham"
 ingredient10 = Ingredient.create :ingredient_name => "shrimp"
 
-crust1 = Crust.create :regular_or_thin => "regular", :price =>1000
+crust1 = Crust.create :regular_or_thin => "regular", :price => 1000
 crust2 = Crust.create :regular_or_thin => "thin", :price => 500
 
-recipe1 = Recipe.create :name => "4chees", :value =>1000, :ingredients_id => 1
-recipe2 = Recipe.create :name => "napolitana", :value =>1000, :ingredients_id => 1
-recipe3 = Recipe.create :name => "spain", :value =>1000, :ingredients_id => 9
-recipe4 = Recipe.create :name => "chilean", :value =>1000, :ingredients_id => 6
-recipe5 = Recipe.create :name => "picante wuey", :value =>1000, :ingredients_id => 8
-recipe6 = Recipe.create :name => "margarete", :value =>1000, :ingredients_id => 3
+recipe1 = Recipe.create :name => "4chees", :value =>1000, :ingredient_id => 1
+recipe2 = Recipe.create :name => "napolitana", :value =>1000, :ingredient_id => 1
+recipe3 = Recipe.create :name => "spain", :value =>1000, :ingredient_id => 9
+recipe4 = Recipe.create :name => "chilean", :value =>1000, :ingredient_id => 6
+recipe5 = Recipe.create :name => "picante wuey", :value =>1000, :ingredient_id => 8
+recipe6 = Recipe.create :name => "margarete", :value =>1000, :ingredient_id => 3
 
 
 pizza1 = Pizza.create :name =>"napolitana", :crust_id => 1, :recipe_id => 1

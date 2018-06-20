@@ -11,5 +11,30 @@
 
 
 
+
+<div class="album py-12 album-transparent ">
+  <div class="container ">
+    <div class="row" >
+      <% @pizza.each do |t| %>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow" style="border-radius: 25px">
+            <h1><%= t.name %></h1>
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp; text=Falcon Heavy" alt="cohete feed" style="height: 225px; width: 100%; display: block;" src="/assets/p1.png">
+            <div class="card-body">
+              <h3>Goal</h3>
+              <p class="card-text"><%= t.name %></p>
+
+
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+
+
 </body>
 </html>
