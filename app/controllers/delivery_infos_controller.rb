@@ -4,7 +4,7 @@ class DeliveryInfosController < ApplicationController
   # GET /delivery_infos
   # GET /delivery_infos.json
   def index
-    @delivery_infos = DeliveryInfo.all
+    @delivery_infos = DeliveryInfo.where(user_id: current_user.id)
   end
 
   # GET /delivery_infos/1
@@ -15,6 +15,7 @@ class DeliveryInfosController < ApplicationController
   # GET /delivery_infos/new
   def new
     @delivery_info = DeliveryInfo.new
+    @delivery_info.user_id = current_user.id
   end
 
   # GET /delivery_infos/1/edit

@@ -1,4 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+<div class = "row">
+
+  <div class=" col-5">
+
+    <div class=" row">
+      <h2>PHONE NUMBER:</h2>
+      <h2><%= @delivery_info.phone_number %></h2>
+    </div>
+
+    <div class=" row">
+      <h2>address_line_1:</h2>
+      <h2> <%= @delivery_info.address_line_1 %></h2>
+    </div>
+
+    <div class=" row">
+      <h2>address_line_2:</h2>
+      <h2> <%= @delivery_info.address_line_2 %></h2>
+    </div>
+
+  </div>
+
 <%= link_to 'Edit', edit_delivery_info_path(@delivery_info) %> |
 <%= link_to 'Back', delivery_infos_path %>
+
+
+
+
+
+
+
+<

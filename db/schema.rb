@@ -13,33 +13,52 @@
 ActiveRecord::Schema.define(version: 20180620202037) do
 
   create_table "crusts", force: :cascade do |t|
+    t.string "regular_or_thin"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "delivery_infos", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "address_line_1"
+    t.string "address_line_2"
+    t.integer "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_delivery_infos_on_user_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
+    t.string "ingredient_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "pizza_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pizza_id"], name: "index_orders_on_pizza_id"
   end
 
   create_table "pizzas", force: :cascade do |t|
+    t.integer "crust_id"
+    t.integer "recipe_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["crust_id"], name: "index_pizzas_on_crust_id"
+    t.index ["recipe_id"], name: "index_pizzas_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
+    t.integer "ingredients_id"
+    t.integer "value"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["ingredients_id"], name: "index_recipes_on_ingredients_id"
   end
 
   create_table "users", force: :cascade do |t|
